@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+* {box-sizing: border-box}
+
+
+body, html {
+  height: 100%;
+   border: double 8px black;
+  margin: 0;
+  font-family: Arial;
+}
+
+
+.tablink {
+  
+margin-top:300px;
+  color: black; 
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 60px 20px;
+  font-size: 40px;
+  width: 25%;
+  letter-spacing:3px;
+}
+
+.tablink:hover {
+    text-decoration: none;
+   border: solid 4px black;
+  
+}
+
+
+.tabcontent {
+  color: black;
+  display: none;
+  height: 100%;
+  color: #000000; text-decoration: none;
+}
+
+#Whisky {background-color: white;}
+#Quest {background-color: white;}
+#Article {background-color: white;}
+#Resume {background-color: white;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="('Archive', this, 'white')"><a href="Archieve.html">Archive </a> </button>
+<button class="tablink" onclick="('Quest', this, 'white')"><a href="quest.html"> Quest</a></button>
+<button class="tablink" onclick="('Article', this, 'white')"><a href="article.html">Article</a></button>
+<button class="tablink" onclick="('Resume', this, 'white')"><a href="resume.html">Resume</a></button>
+
+ <div id="Whisky" class="tabcontent" >
+                   
+
+
+</div>
+
+
+<div id="Quest" class="tabcontent" >
+
+
+</div>
+
+<div id="Article" class="tabcontent">
+
+
+</div>
+
+<div id="Resume" class="tabcontent">
+
+</div>
+
+<script>
+function (pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "none";
+  }
+  document.(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+
+
+</script>
+   
+</body>
+</html> 
